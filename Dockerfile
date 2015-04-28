@@ -57,6 +57,9 @@ RUN chown -R odoo:odoo /opt/odoo
 RUN mkdir /opt/odoo_data
 RUN chown -R odoo:odoo /opt/odoo_data
 
+# Add wdb
+RUN pip install wdb
+
 # Boot the environment up
 USER 0
 ADD sources/odoo.conf /etc/odoo/odoo.conf
