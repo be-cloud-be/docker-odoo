@@ -31,7 +31,7 @@ function start {
     if [ ! -z "$1" ]; then
         echo "...with additional args: $*"
     fi
-    sudo -i -u odoo /usr/bin/python \
+    sudo -E -u odoo /usr/bin/python \
                     /opt/odoo/openerp-server \
                     -c /etc/odoo/odoo.conf \
                     $*
